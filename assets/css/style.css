@@ -12,6 +12,7 @@ html, body {
   overflow-x: hidden;
   border: none;
   outline: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* ========== PRELOADER ========== */
