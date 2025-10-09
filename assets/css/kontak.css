@@ -1,0 +1,135 @@
+/* KONTAK SECTION */
+.contact {
+  background: linear-gradient(
+    to bottom,
+    #FFF9F3 0%,    /* top color matches previous section */
+    #FFEEDD 40%,   /* smooth mid-blend */
+    #FFE3CC 100%   /* slightly richer bottom tone */
+    );
+    padding: 5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+
+.contact-container {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Left: Info */
+.contact-info {
+  flex: 1 1 350px;
+  color: #3B1D0A;
+}
+
+.contact-info h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: #8A4B23;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #5A3A1B;
+}
+
+.info-list p i {
+  color: #FF7D29;
+  margin-right: 0.5rem;
+}
+
+/* Social Icons */
+.socials {
+  margin-top: 1.5rem;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #fff;
+  background: #FF7D29;
+  margin-right: 0.7rem;
+  padding: 0.6rem;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.socials a:hover {
+  background: #E86D00;
+  transform: translateY(-3px);
+}
+
+/* Right: Form */
+.contact-form {
+  flex: 1 1 350px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.contact-form h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: #8A4B23;
+  margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  margin-bottom: 1rem;
+  border: 1.5px solid #E5C4A1;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #FF7D29;
+  box-shadow: 0 0 4px rgba(255,125,41,0.3);
+}
+
+.btn-send {
+  width: 100%;
+  background: #FF7D29;
+  color: #fff;
+  border: none;
+  padding: 0.9rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-send:hover {
+  background: #E86D00;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+}

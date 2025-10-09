@@ -1,0 +1,149 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  overflow-x: hidden;
+  border: none;
+  outline: none;
+}
+
+/* ===== HEADER ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+  background-color: transparent;
+  backdrop-filter: none;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+/* When scrolled */
+.navbar.scrolled {
+  background-color: rgba(59, 29, 10, 0.9); /* warm dark brown */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Keep spacing consistent */
+.navbar > * {
+  flex: 1;
+}
+
+/* ===== LOGO ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff9e8;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff9e8;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+  color: #FF7D29;
+}
+
+/* ===== AUTH BUTTONS ===== */
+.auth-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.auth-buttons a {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline {
+  border: 2px solid #FF7D29;
+  background-color: transparent;
+  color: #FF7D29;
+  transition: all 0.3s ease;
+  
+}
+
+.btn-outline:hover {
+  background-color: #fff;
+  color: #FF7D29;
+  transform: translateY(-2px);
+}
+
+
+.btn-fill {
+  background-color: #FF7D29;
+  border: 2px solid #FF7D29;
+  color: #fff;
+}
+.btn-fill:hover {
+  background-color: #E86D00;
+  transform: translateY(-2px);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #FF7D29;
+  text-align: center;
+  padding: 1rem 0;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+}
+
+.auth-buttons .btn-outline {
+  border: 2px solid #FF7D29;
+  background-color: transparent;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.auth-buttons .btn-outline:hover {
+  background-color: #fff;
+  color: #FF7D29;
+  transform: translateY(-2px);
+}
