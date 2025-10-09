@@ -1,0 +1,193 @@
+/* ===== GLOBAL LAYOUT ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #FF7D29 0%, #FFE3CC 100%);
+  display: grid;
+  place-items: center;
+}
+
+/* ===== AUTH CARD ===== */
+.auth-box {
+  background-color: #fff;
+  padding: 3.5rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 440px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 460px;
+}
+
+/* ===== FORM ELEMENTS ===== */
+.auth-box input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  margin-bottom: 1rem;
+  border: 1.5px solid #E5C4A1;
+  border-radius: 10px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.auth-box input:focus {
+  border-color: #FF7D29;
+  box-shadow: 0 0 4px rgba(255, 125, 41, 0.3);
+  outline: none;
+}
+
+/* === TITLE SPACING === */
+.auth-box h2 {
+  color: #3B1D0A;
+  margin-bottom: 2rem; /* larger gap before role buttons */
+  font-weight: 700;
+}
+
+/* === ROLE SELECTOR IMPROVED === */
+.role-select {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 2rem; /* more breathing room after buttons */
+}
+
+.role-btn {
+  flex: 1;
+  max-width: 140px; /* tighter size for balance */
+  background: none;
+  border: 2px solid #FF7D29;
+  border-radius: 10px;
+  padding: 0.7rem 1.2rem;
+  font-weight: 600;
+  color: #FF7D29;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.role-btn:hover {
+  background: #FF7D29;
+  color: #fff;
+}
+
+.role-btn.active {
+  background: #FF7D29;
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(255, 125, 41, 0.3);
+}
+
+/* === BACK HOME LINK (HEADER) === */
+.back-home {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: #3B1D0A;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.back-home i {
+  font-size: 0.85rem;
+  transition: transform 0.3s ease;
+}
+
+.back-home:hover {
+  color: #FF7D29;
+}
+
+.back-home:hover i {
+  transform: translateX(-4px);
+}
+
+
+.btn-fill {
+  background-color: #FF7D29;
+  border: none;
+  color: #fff;
+  padding: 0.9rem;
+  border-radius: 10px;
+  width: 100%;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-fill:hover {
+  background-color: #E86D00;
+  transform: translateY(-2px);
+}
+
+.switch-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #5A3A1B;
+}
+
+.switch-text a {
+  color: #FF7D29;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.switch-text a:hover {
+  text-decoration: underline;
+}
+
+
+/* Role Buttons */
+.role-select {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.role-btn {
+  flex: 1;
+  background: none;
+  border: 2px solid #FF7D29;
+  border-radius: 10px;
+  padding: 0.7rem 1.2rem;
+  font-weight: 600;
+  color: #FF7D29;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.role-btn:hover {
+  background: #FF7D29;
+  color: #fff;
+}
+
+.role-btn.active {
+  background: #FF7D29;
+  color: #fff;
+}
+
+/* Form Sections */
+.form-section {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

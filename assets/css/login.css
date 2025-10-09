@@ -1,0 +1,109 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* ===== BACKGROUND + CENTERING ===== */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #FF7D29 0%, #FFE3CC 100%);
+  display: grid;
+  place-items: center; /* <-- perfect horizontal + vertical centering */
+  overflow: hidden; /* prevents scrollbar shifting */
+}
+
+/* ===== Container ===== */
+.auth-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Card ===== */
+.auth-box {
+  background-color: #fff;
+  padding: 3.5rem 3rem; /* slightly more padding */
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 500px; /* wider card */
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 460px; /* taller for more breathing room */
+}
+
+
+
+/* ===== Title ===== */
+.auth-box h2 {
+  color: #8A4B23;
+  margin-bottom: 1.8rem;
+}
+
+/* ===== Inputs ===== */
+.auth-box form {
+  width: 100%;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  margin-bottom: 1rem;
+  border: 1.5px solid #E5C4A1;
+  border-radius: 10px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.auth-box input:focus {
+  border-color: #FF7D29;
+  box-shadow: 0 0 4px rgba(255,125,41,0.3);
+  outline: none;
+}
+
+/* ===== Button ===== */
+.btn-fill {
+  background-color: #FF7D29;
+  border: none;
+  color: #fff;
+  padding: 0.9rem;
+  border-radius: 10px;
+  width: 100%;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-fill:hover {
+  background-color: #E86D00;
+  transform: translateY(-2px);
+}
+
+/* ===== Text / Switch Link ===== */
+.switch-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #5A3A1B;
+}
+
+.switch-text a {
+  color: #FF7D29;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.switch-text a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar | RumahIN</title>
+  <link rel="stylesheet" href="assets/css/register.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <a href="index.html" class="back-home"><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda</a>
+
+  <div class="auth-container">
+    <div class="auth-box">
+      <h2>Daftar ke RumahIN</h2>
+
+      <!-- Role Selector -->
+      <div class="role-select">
+        <button class="role-btn active" id="user-btn">Pengguna</button>
+        <button class="role-btn" id="mitra-btn">Mitra</button>
+      </div>
+
+      <!-- User Form -->
+      <form id="user-form" class="form-section">
+        <input type="text" placeholder="Nama Lengkap" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Kata Sandi" required>
+        <button type="submit" class="btn btn-fill">Daftar</button>
+        <p class="switch-text">Sudah punya akun? <a href="login.html">Masuk</a></p>
+      </form>
+
+      <!-- Mitra Form -->
+      <form id="mitra-form" class="form-section" style="display: none;">
+        <input type="text" placeholder="Nama Pemilik Homestay" required>
+        <input type="text" placeholder="Nama Homestay" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Kata Sandi" required>
+        <input type="text" placeholder="Alamat Homestay" required>
+        <button type="submit" class="btn btn-fill">Daftar sebagai Mitra</button>
+        <p class="switch-text">Sudah punya akun? <a href="login.html">Masuk</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  <script>
+    const userBtn = document.getElementById('user-btn');
+    const mitraBtn = document.getElementById('mitra-btn');
+    const userForm = document.getElementById('user-form');
+    const mitraForm = document.getElementById('mitra-form');
+
+    userBtn.addEventListener('click', () => {
+      userBtn.classList.add('active');
+      mitraBtn.classList.remove('active');
+      userForm.style.display = 'block';
+      mitraForm.style.display = 'none';
+    });
+
+    mitraBtn.addEventListener('click', () => {
+      mitraBtn.classList.add('active');
+      userBtn.classList.remove('active');
+      mitraForm.style.display = 'block';
+      userForm.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
