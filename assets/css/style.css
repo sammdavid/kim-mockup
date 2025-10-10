@@ -285,11 +285,11 @@ body {
 }
 
 .btn-search {
-  padding: 1rem 2.5rem;
+  padding: 2rem, 2.5rem;
   background: linear-gradient(135deg, var(--primary-orange), var(--dark-orange));
   color: white;
   border: none;
-  border-radius: 50px;
+  border-radius: 50%;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 1rem;
