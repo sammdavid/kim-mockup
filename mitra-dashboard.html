@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Mitra | RumahIN</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/mitra-dashboard.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="assets/img/logolight.png" alt="RumahIN Logo">
+      <span>RumahIN</span>
+    </div>
+    <nav>
+      <ul>
+        <li class="active"><i class="fa-solid fa-gauge"></i> Dashboard</li>
+        <li><i class="fa-solid fa-house"></i> Homestay Saya</li>
+        <li onclick="window.location.href='pengajuan-homestay.html'">
+          <i class="fa-solid fa-circle-plus"></i> Ajukan Homestay
+        </li>
+        <li><i class="fa-solid fa-chart-line"></i> Statistik</li>
+        <li><i class="fa-solid fa-envelope"></i> Komplain</li>
+        <li><i class="fa-solid fa-gear"></i> Pengaturan</li>
+      </ul>
+    </nav>
+    <a href="login.html" class="logout-btn">
+      <i class="fa-solid fa-right-from-bracket"></i> Logout
+    </a>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Topbar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <h1>Dashboard Mitra</h1>
+      </div>
+      <div class="topbar-right">
+        <div class="search-box">
+          <input type="text" placeholder="Cari homestay...">
+          <i class="fa-solid fa-search"></i>
+        </div>
+        <div class="notif">
+          <i class="fa-solid fa-bell"></i><span class="badge">2</span>
+        </div>
+        <div class="mitra-profile">
+          <i class="fa-solid fa-user-circle"></i>
+          <span>Budi Santoso</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Stats -->
+    <section class="stats">
+      <div class="stat-card">
+        <i class="fa-solid fa-house"></i>
+        <div>
+          <h3>3</h3>
+          <p>Total Homestay</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <i class="fa-solid fa-circle-check"></i>
+        <div>
+          <h3>2</h3>
+          <p>Aktif</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <i class="fa-solid fa-clock"></i>
+        <div>
+          <h3>1</h3>
+          <p>Menunggu Verifikasi</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <i class="fa-solid fa-star"></i>
+        <div>
+          <h3>4.8</h3>
+          <p>Rata-rata Rating</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="quick-actions">
+      <h2>Aksi Cepat</h2>
+      <div class="actions-grid">
+        <div class="action-card" onclick="window.location.href='pengajuan-homestay.html'">
+          <i class="fa-solid fa-house-user"></i>
+          <p>Ajukan Homestay Baru</p>
+        </div>
+        <div class="action-card">
+          <i class="fa-solid fa-chart-line"></i>
+          <p>Lihat Statistik</p>
+        </div>
+        <div class="action-card">
+          <i class="fa-solid fa-envelope"></i>
+          <p>Lihat Komplain</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Homestay Saya -->
+    <section class="table-section">
+      <div class="section-header">
+        <h2>Homestay Saya</h2>
+        <button class="btn-add" onclick="window.location.href='pengajuan-homestay.html'">
+          <i class="fa-solid fa-plus"></i> Tambah Homestay
+        </button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Nama Homestay</th>
+            <th>Alamat</th>
+            <th>Status</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Villa Harmony</td>
+            <td>Jl. Mawar No. 7, Banyuwangi</td>
+            <td><span class="status verified">Aktif</span></td>
+            <td>
+              <button class="btn-view">Lihat</button>
+              <button class="btn-edit">Edit</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Rumah Purnama</td>
+            <td>Jl. Kenanga No. 23, Malang</td>
+            <td><span class="status pending">Menunggu</span></td>
+            <td>
+              <button class="btn-view">Lihat</button>
+              <button class="btn-edit">Edit</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer class="footer">
+      <p>© 2025 RumahIN • Dashboard Mitra</p>
+    </footer>
+  </main>
+
+</body>
+</html>
