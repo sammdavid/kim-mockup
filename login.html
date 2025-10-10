@@ -7,6 +7,83 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/login.css">
 </head>
+
+
+<script>
+  // Grab forms
+  const loginForm = document.getElementById("login-form");
+  const registerForm = document.getElementById("register-form");
+  const showRegister = document.getElementById("show-register");
+  const showLogin = document.getElementById("show-login");
+
+  // --- Switch between login/register ---
+  showRegister.addEventListener("click", e => {
+    e.preventDefault();
+    loginForm.style.display = "none";
+    registerForm.style.display = "flex";
+  });
+
+  showLogin.addEventListener("click", e => {
+    e.preventDefault();
+    registerForm.style.display = "none";
+    loginForm.style.display = "flex";
+  });
+
+  // --- Fake user "database" in localStorage ---
+  const defaultUser = {
+    name: "Demo Mitra",
+    email: "demo@rumahin.com",
+    password: "demo123"
+  };
+
+  // store default if none exists
+  if (!localStorage.getItem("users")) {
+    localStorage.setItem("users", JSON.stringify([defaultUser]));
+  }
+
+  // --- Register new fake user ---
+  registerForm.addEventListener("submit", e => {
+    e.preventDefault();
+    const name = registerForm.querySelector('input[type="text"]').value;
+    const email = registerForm.querySelector('input[type="email"]').value;
+    const password = registerForm.querySelector('input[type="password"]').value;
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // prevent duplicate email
+    if (users.find(u => u.email === email)) {
+      alert("Email sudah terdaftar!");
+      return;
+    }
+
+    users.push({ name, email, password });
+    localStorage.setItem("users", JSON.stringify(users));
+    alert("Registrasi berhasil! Silakan masuk.");
+
+    registerForm.reset();
+    registerForm.style.display = "none";
+    loginForm.style.display = "flex";
+  });
+
+  // --- Login check ---
+  loginForm.addEventListener("submit", e => {
+    e.preventDefault();
+    const email = loginForm.querySelector('input[type="email"]').value;
+    const password = loginForm.querySelector('input[type="password"]').value;
+
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const found = users.find(u => u.email === email && u.password === password);
+
+    if (found) {
+      localStorage.setItem("currentUser", JSON.stringify(found));
+      alert(`Selamat datang, ${found.name}!`);
+      window.location.href = "dashboard.html"; // redirect after login
+    } else {
+      alert("Email atau kata sandi salah!");
+    }
+  });
+</script>
+
 <body>
     <a href="index.html" class="back-home"><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda</a>
 
@@ -27,29 +104,10 @@
         <input type="email" placeholder="Email" required>
         <input type="password" placeholder="Kata Sandi" required>
         <button type="submit" class="btn btn-fill">Daftar</button>
-        <p class="switch-text">Sudah punya akun? <a href="#" id="show-login">Masuk</a></p>
+        <p class="switch-text">Sudah punya akun? <a href="assets/dashboard.html" id="show-login">Masuk</a></p>
       </form>
     </div>
   </div>
 
-  <script>
-    const loginForm = document.getElementById('login-form');
-    const registerForm = document.getElementById('register-form');
-    const title = document.getElementById('form-title');
-
-    document.getElementById('show-register').addEventListener('click', (e) => {
-      e.preventDefault();
-      loginForm.style.display = 'none';
-      registerForm.style.display = 'block';
-      title.textContent = 'Daftar di RumahIN';
-    });
-
-    document.getElementById('show-login').addEventListener('click', (e) => {
-      e.preventDefault();
-      registerForm.style.display = 'none';
-      loginForm.style.display = 'block';
-      title.textContent = 'Masuk ke RumahIN';
-    });
-  </script>
 </body>
 </html>

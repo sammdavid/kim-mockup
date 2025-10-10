@@ -1,70 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Detail Homestay | RumahIN</title>
-  <link rel="stylesheet" href="assets/css/details.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a2e0bf0d3b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/details.css">
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      referrerpolicy="no-referrer" />
+
 </head>
 <body>
 
-  <a href="index.html" class="back-home">
-    <i class="fa-solid fa-arrow-left"></i> <span>Kembali</span>
-  </a>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/img/logolight.png" alt="RumahIN Logo">
+      <span>RumahIN</span>
+    </div>
 
+    <nav class="nav-center">
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="#">Mitra Kami</a></li>
+        <li><a href="#">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-right">
+      <a href="profile.html" class="btn-profile"><i class="fa-solid fa-user"></i> Profil</a>
+    </div>
+  </header>
+
+  <!-- Details Section -->
   <section class="details-container">
+
+    <!-- Image Gallery -->
+    <div class="gallery">
+      <img src="assets/img/villa-harmony.jpg" alt="Homestay">
+      <img src="assets/img/villa-harmony2.jpg" alt="Homestay">
+      <img src="assets/img/villa-harmony3.jpg" alt="Homestay">
+    </div>
+
+    <!-- Main Info Card -->
     <div class="details-card">
 
-      <div class="image-wrapper">
-        <img src="assets/img/hero-bg.jpg" alt="Homestay photo">
-      </div>
+      <h1 class="homestay-name">Rumah Purnama Homestay</h1>
 
-      <div class="details-content">
-        <h1 class="homestay-name">Rumah Purnama Homestay</h1>
+      <div class="meta">
         <p class="address"><i class="fa-solid fa-location-dot"></i> Jl. Kenanga No. 23, Malang, Jawa Timur</p>
-
+        <p class="price">Rp350.000 <span>/ malam</span></p>
         <div class="rating">
           <span class="stars">★★★★★</span>
-          <span class="score">4.8 / 5 (32 reviews)</span>
+          <span class="score">4.8 / 5 (32 ulasan)</span>
         </div>
+      </div>
 
-        <p class="description">
-          Nikmati kenyamanan tinggal di Rumah Purnama Homestay yang dikelilingi suasana asri dan sejuk.
-          Tersedia kamar bersih, WiFi gratis, dapur bersama, serta lokasi strategis dekat tempat wisata.
-        </p>
+      <p class="description">
+        Nikmati kenyamanan tinggal di Rumah Purnama Homestay yang dikelilingi suasana asri dan sejuk.
+        Fasilitas lengkap, kamar bersih, WiFi gratis, dan lokasi strategis dekat berbagai tempat wisata.
+      </p>
 
-        <div class="contact-box">
-          <p>Interested? If so, please contact:</p>
-          <a href="https://wa.me/6281234567890" target="_blank" class="wa-btn">
-            <i class="fa-brands fa-whatsapp"></i> +62 812-3456-7890
-          </a>
+      <!-- Facilities -->
+      <div class="facilities">
+        <h2>Fasilitas</h2>
+        <ul class="facilities-list">
+          <li><i class="fa-solid fa-wifi"></i> WiFi Gratis</li>
+          <li><i class="fa-solid fa-snowflake"></i> Air Conditioning</li>
+          <li><i class="fa-solid fa-shower"></i> Kamar Mandi Pribadi</li>
+          <li><i class="fa-solid fa-utensils"></i> Sarapan Pagi</li>
+          <li><i class="fa-solid fa-car"></i> Tempat Parkir</li>
+        </ul>
+      </div>
+
+      <!-- Host Info -->
+      <div class="host-info">
+        <img src="assets/img/budi.jpg" alt="Host">
+        <div>
+          <h3>Hosted by Budi Santoso</h3>
+          <p>Local guide dan pecinta kopi yang senang berbagi cerita tentang keindahan Malang. 
+          Selalu siap membantu tamu untuk menemukan pengalaman terbaik selama menginap.</p>
+          <p class="hosted-since">Menjadi tuan rumah sejak 2022 • Diperbarui Oktober 2025</p>
         </div>
+      </div>
 
-        <div class="reviews">
-          <h2>User Reviews</h2>
+      <!-- Map -->
+      <div class="map-section">
+        <h2>Lokasi</h2>
+        <iframe
+          src="https://www.google.com/maps?q=Jl.+Kenanga+No.+23,+Malang,+Indonesia&output=embed"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
 
-          <div class="review">
-            <div class="review-header">
+      <!-- Reviews -->
+      <div class="reviews">
+        <h2>Ulasan Tamu</h2>
+
+        <div class="review">
+          <div class="review-header">
+            <img src="assets/img/avatar1.jpg" alt="Aulia" class="avatar">
+            <div>
               <strong>Aulia Rahman</strong>
               <span class="stars">★★★★★</span>
             </div>
-            <p>Tempatnya bersih banget dan owner-nya super ramah! Bakal balik lagi kalo ke Malang.</p>
           </div>
+          <p>Tempatnya bersih banget dan owner-nya super ramah! Bakal balik lagi kalo ke Malang.</p>
+        </div>
 
-          <div class="review">
-            <div class="review-header">
+        <div class="review">
+          <div class="review-header">
+            <img src="assets/img/avatar2.jpg" alt="Rizky" class="avatar">
+            <div>
               <strong>Rizky Pratama</strong>
               <span class="stars">★★★★☆</span>
             </div>
-            <p>Nyaman, tapi parkirannya agak sempit. Overall oke!</p>
           </div>
-
+          <p>Nyaman, tapi parkirannya agak sempit. Overall oke!</p>
         </div>
       </div>
+
+      <!-- Contact -->
+      <div class="contact-box">
+        <p>Tertarik? Hubungi Mitra Kami:</p>
+        <a href="https://wa.me/6281234567890" target="_blank" class="wa-btn">
+          <i class="fa-brands fa-whatsapp"></i> +62 812-3456-7890
+        </a>
+      </div>
+
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Mahasiswa Universitas Airlangga • RumahIN</p>
+  </footer>
 
 </body>
 </html>
